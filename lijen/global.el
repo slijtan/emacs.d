@@ -26,3 +26,5 @@
 (show-paren-mode t)
 
 (load-theme 'tango)
+
+(setq scss-compile-at-save nil)
