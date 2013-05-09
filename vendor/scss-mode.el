@@ -108,7 +108,7 @@ Special commands:
 (push '("on line \\([0-9]+\\) of \\([^ ]+\\)$" 2 1 nil 2) flymake-err-line-patterns)
 
 ;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+(add-to-list 'auto-mode-alist '("\\.scss.*\\'" . scss-mode))
 
 (provide 'scss-mode)
 ;;; scss-mode.el ends here
