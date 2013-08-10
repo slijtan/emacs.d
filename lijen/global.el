@@ -35,3 +35,13 @@
 	    (setq sgml-basic-offset 4)
 	    (setq-default tab-width 4)
 	    (setq indent-tabs-mode t)))
+
+
+;;html inline with js and css
+(require 'multi-web-mode)
+(setq mweb-default-major-mode 'html-mode)
+(setq mweb-tags '((php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
+                  (js-mode "<script[^>]*>" "</script>")
+                  (css-mode "<style[^>]*>" "</style>")))
+(setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5" "erb"))
+(multi-web-global-mode 1)
