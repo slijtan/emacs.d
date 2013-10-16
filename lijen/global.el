@@ -3,9 +3,6 @@
 ;; Make sure all backup files only live in one place
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 
-;; Trailing whitespace is unnecessary
-;;(add-hook 'before-save-hook (lambda () (whitespace-cleanup)))
-
 ;; "y or n" instead of "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -42,6 +39,17 @@
 (setq mweb-default-major-mode 'html-mode)
 (setq mweb-tags '((php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
                   (js-mode "<script[^>]*>" "</script>")
+                  (ruby-mode "<%" "%>")
                   (css-mode "<style[^>]*>" "</style>")))
 (setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5" "erb"))
 (multi-web-global-mode 1)
+
+;; Trailing whitespace is unnecessary
+;;(add-hook 'before-save-hook (lambda () (whitespace-cleanup)))
+
+;;highlight lines over 80 chars
+(require 'whitespace)
+;;(setq whitespace-style '(face empty tabs lines-tail trailing))
+(setq whitespace-style '(face empty lines-tail space-after-tab::tab space-before-tab::space))
+(setq whitespace-line-column '100)
+(global-whitespace-mode t)
