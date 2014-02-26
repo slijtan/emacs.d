@@ -53,3 +53,7 @@
 (setq whitespace-style '(face empty lines-tail space-after-tab::tab space-before-tab::space))
 (setq whitespace-line-column '100)
 (global-whitespace-mode t)
+
+;; skip paragraph with alt up/down
+(global-set-key (kbd "s-<down>") 'forward-paragraph)
+(global-set-key (kbd "s-<up>") 'backward-paragraph)
