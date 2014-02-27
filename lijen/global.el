@@ -57,3 +57,6 @@
 ;; skip paragraph with alt up/down
 (global-set-key (kbd "s-<down>") 'forward-paragraph)
 (global-set-key (kbd "s-<up>") 'backward-paragraph)
+
+;; enable deleting selections
+(delete-selection-mode 1)
