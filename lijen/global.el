@@ -60,3 +60,13 @@
 
 ;; enable deleting selections
 (delete-selection-mode 1)
+
+;; align hash rockets to f5
+(defun align-assignments ()
+  "Align on a single equals sign (with a space either side)."
+  (interactive)
+  (align-regexp
+   (region-beginning) (region-end)
+   "\\(\\s-*\\) =" 1 0 nil))
+
+(global-set-key (kbd "<f5>") 'align-assignments)
