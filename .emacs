@@ -89,3 +89,5 @@
 	          (if (and (not (null buffer-file-name)) (file-writable-p buffer-file-name))
 		       (flymake-mode))
 		       ))
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
