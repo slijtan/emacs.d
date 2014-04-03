@@ -13,7 +13,7 @@
 (load "vendor/scss-mode")
 ;;(load "vendor/cucumber.el/feature-mode.el")
 (load "vendor/coffee-mode/coffee-mode.el")
-(load "vendor/multi-web-mode.el")
+;; (load "vendor/multi-web-mode.el")
 
 ;; php-mode
 (add-to-list 'load-path "~/.emacs.d/php-mode")
@@ -91,3 +91,9 @@
 		       ))
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+
+
+;; for erb, embeded html, etc
+(add-to-list 'load-path "~/.emacs.d/vendor/web-mode")
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))

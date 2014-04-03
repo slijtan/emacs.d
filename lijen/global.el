@@ -35,14 +35,14 @@
 
 
 ;;html inline with js and css
-(require 'multi-web-mode)
-(setq mweb-default-major-mode 'html-mode)
-(setq mweb-tags '((php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
-                  (js-mode "<script[^>]*>" "</script>")
-                  (ruby-mode "<%" "%>")
-                  (css-mode "<style[^>]*>" "</style>")))
-(setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5" "erb"))
-(multi-web-global-mode 1)
+;; (require 'multi-web-mode)
+;; (setq mweb-default-major-mode 'html-mode)
+;;(setq mweb-tags '((php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
+;;                  (js-mode "<script[^>]*>" "</script>")
+;;                  (ruby-mode "<%" "%>")
+;;                  (css-mode "<style[^>]*>" "</style>")))
+;;(setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5" "erb"))
+;;(multi-web-global-mode 1)
 
 ;; Trailing whitespace is unnecessary
 ;;(add-hook 'before-save-hook (lambda () (whitespace-cleanup)))
