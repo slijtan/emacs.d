@@ -6,13 +6,15 @@
 ;; (add-to-list 'load-path "~/.emacs.d/rinari")
 ;; (require 'rinari)
 
-;; (add-to-list 'load-path "~/.emacs.d")
+;;(add-to-list 'load-path "~/.emacs.d/*")
 
 ;;scss
 (add-to-list 'load-path "~/.emacs.d/vendor")
-(load "vendor/scss-mode")
+(load "scss-mode.el")
 ;;(load "vendor/cucumber.el/feature-mode.el")
-(load "vendor/coffee-mode/coffee-mode.el")
+
+(add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
+(load "coffee-mode.el")
 ;; (load "vendor/multi-web-mode.el")
 
 ;; php-mode
@@ -24,7 +26,8 @@
 (autoload 'pig-latin-mode "pig-latin-mode" "Pig-Latin mode" t)
 
 ;; Lijens
-(load "lijen/global")
+(add-to-list 'load-path "~/.emacs.d/lijen")
+(load "global")
 
 ;; textmate
 (add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
