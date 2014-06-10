@@ -6,7 +6,7 @@
 ;; (add-to-list 'load-path "~/.emacs.d/rinari")
 ;; (require 'rinari)
 
-(add-to-list 'load-path "~/.emacs.d")
+;; (add-to-list 'load-path "~/.emacs.d")
 
 ;;scss
 (add-to-list 'load-path "~/.emacs.d/vendor")
