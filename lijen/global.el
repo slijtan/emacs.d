@@ -2,6 +2,7 @@
 
 ;; Make sure all backup files only live in one place
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq auto-save-file-name-transforms `((".*" , "~/.emacs.d/backups" t)))
 
 ;; "y or n" instead of "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -70,3 +71,6 @@
    "\\(\\s-*\\) =" 1 0 nil))
 
 (global-set-key (kbd "<f5>") 'align-assignments)
+
+;; make sure C-j works for newline + indend
+(electric-indent-mode -1)
